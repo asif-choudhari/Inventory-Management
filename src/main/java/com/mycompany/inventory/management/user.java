@@ -185,6 +185,7 @@ public class user extends javax.swing.JFrame {
         jLabel10.setForeground(new java.awt.Color(102, 102, 102));
         jLabel10.setText("User ID:");
 
+        editButton.setBackground(new java.awt.Color(242, 242, 242));
         editButton.setFont(new java.awt.Font("Century Gothic", 1, 16)); // NOI18N
         editButton.setText("Edit");
         editButton.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -198,6 +199,7 @@ public class user extends javax.swing.JFrame {
             }
         });
 
+        deleteButton.setBackground(new java.awt.Color(242, 242, 242));
         deleteButton.setFont(new java.awt.Font("Century Gothic", 1, 16)); // NOI18N
         deleteButton.setText("Delete");
         deleteButton.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -211,6 +213,7 @@ public class user extends javax.swing.JFrame {
             }
         });
 
+        addButton.setBackground(new java.awt.Color(242, 242, 242));
         addButton.setFont(new java.awt.Font("Century Gothic", 1, 16)); // NOI18N
         addButton.setText("Add");
         addButton.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -224,6 +227,7 @@ public class user extends javax.swing.JFrame {
             }
         });
 
+        homeButton.setBackground(new java.awt.Color(242, 242, 242));
         homeButton.setFont(new java.awt.Font("Century Gothic", 1, 16)); // NOI18N
         homeButton.setText("Home");
         homeButton.addMouseListener(new java.awt.event.MouseAdapter() {

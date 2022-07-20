@@ -26,6 +26,7 @@ public class product extends javax.swing.JFrame {
     public product() {
         initComponents();
         displayTable();
+        getCategory();
     }
     
     Connection connection = null;
@@ -38,28 +39,24 @@ public class product extends javax.swing.JFrame {
             statement = connection.createStatement();
             resultSet = statement.executeQuery("SELECT * FROM product_table");
             productTable.setModel(DbUtils.resultSetToTableModel(resultSet));
-//            while(resultSet.next()){
-//                // data is taken row wise
-//                String id = String.valueOf(resultSet.getInt("id"));
-//                String name = resultSet.getString("name");
-//                String quantity = String.valueOf(resultSet.getInt("quantity"));
-//                String description = resultSet.getString("description");
-//                String category = resultSet.getString("category");
-//                
-//                //data is put in to array
-//                String[] data = {id, name, quantity, description, category};
-//                DefaultTableModel tableModel = (DefaultTableModel) productTable.getModel();
-//                
-//                
-//                //add array to the table
-//                tableModel.addRow(data);
-//            }
-            
         }catch(Exception e){
             e.printStackTrace();
         }
     }
     
+    private void getCategory(){
+        try{
+            connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/inventory", "root", "88675");
+            statement = connection.createStatement();
+            resultSet = statement.executeQuery("SELECT * FROM category_table");
+            while(resultSet.next()){
+                String category = resultSet.getString("Name");
+                categoryDropDown.addItem(category);
+            }
+        } catch(Exception e){
+            e.printStackTrace();
+        }
+    }
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
@@ -187,8 +184,8 @@ public class product extends javax.swing.JFrame {
 
         categoryDropDown.setFont(new java.awt.Font("Century Gothic", 1, 14)); // NOI18N
         categoryDropDown.setForeground(new java.awt.Color(102, 102, 102));
-        categoryDropDown.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
 
+        editButton.setBackground(new java.awt.Color(242, 242, 242));
         editButton.setFont(new java.awt.Font("Century Gothic", 1, 16)); // NOI18N
         editButton.setText("Edit");
         editButton.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -202,6 +199,7 @@ public class product extends javax.swing.JFrame {
             }
         });
 
+        deleteButton.setBackground(new java.awt.Color(242, 242, 242));
         deleteButton.setFont(new java.awt.Font("Century Gothic", 1, 16)); // NOI18N
         deleteButton.setText("Delete");
         deleteButton.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -215,6 +213,7 @@ public class product extends javax.swing.JFrame {
             }
         });
 
+        addButton.setBackground(new java.awt.Color(242, 242, 242));
         addButton.setFont(new java.awt.Font("Century Gothic", 1, 16)); // NOI18N
         addButton.setText("Add");
         addButton.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -228,6 +227,7 @@ public class product extends javax.swing.JFrame {
             }
         });
 
+        homeButton.setBackground(new java.awt.Color(242, 242, 242));
         homeButton.setFont(new java.awt.Font("Century Gothic", 1, 16)); // NOI18N
         homeButton.setText("Home");
         homeButton.addMouseListener(new java.awt.event.MouseAdapter() {

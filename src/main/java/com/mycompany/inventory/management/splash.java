@@ -110,9 +110,9 @@ public class splash extends javax.swing.JFrame {
                 splashScreen.percentageLabel.setText(Integer.valueOf(i)+"%");
             }
         } catch(Exception e){
-            
+            e.printStackTrace();
         }
-        new login().setVisible(true);
+        new login().main(new String[0]);
         splashScreen.dispose();
     }
 

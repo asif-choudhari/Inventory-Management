@@ -414,12 +414,13 @@ public class order extends javax.swing.JFrame {
                     .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 185, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 191, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel10)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(addButton, javax.swing.GroupLayout.PREFERRED_SIZE, 41, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel13)
-                    .addComponent(priceTextBox, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(quantityTextBox, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addComponent(jLabel10)
+                        .addComponent(jLabel13)
+                        .addComponent(priceTextBox, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(quantityTextBox, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
                         .addGap(14, 14, 14)
@@ -501,10 +502,11 @@ public class order extends javax.swing.JFrame {
         else{
             try{
             connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/inventory", "root", "88675");
-            PreparedStatement add = connection.prepareStatement("INSERT INTO order_table VALUES(?,?,?)");
+            PreparedStatement add = connection.prepareStatement("INSERT INTO order_table VALUES(?,?,?,?)");
             add.setString(1, dateDisplay.getText());
             add.setString(2, nameDisplay.getText());
             add.setString(3, phoneDisplay.getText());
+            add.setString(4, Long.toString(total));
             add.executeUpdate();
             connection.close();
             JOptionPane.showMessageDialog(this, "Order placed successfully");
@@ -566,7 +568,7 @@ public class order extends javax.swing.JFrame {
 
     private void viewOrderButtonMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_viewOrderButtonMouseClicked
         new viewOrder().setVisible(true);
-        this.dispose();
+        this.setVisible(false);
     }//GEN-LAST:event_viewOrderButtonMouseClicked
 
     private void viewOrderButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_viewOrderButtonActionPerformed
