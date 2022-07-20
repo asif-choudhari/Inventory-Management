@@ -118,33 +118,18 @@ public class customer extends javax.swing.JFrame {
         );
 
         cust_idTextBox.setFont(new java.awt.Font("Century Gothic", 1, 14)); // NOI18N
-        cust_idTextBox.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                cust_idTextBoxActionPerformed(evt);
-            }
-        });
 
         jLabel5.setFont(new java.awt.Font("Century Gothic", 1, 18)); // NOI18N
         jLabel5.setForeground(new java.awt.Color(102, 102, 102));
         jLabel5.setText("Name:");
 
         nameTextBox.setFont(new java.awt.Font("Century Gothic", 1, 14)); // NOI18N
-        nameTextBox.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                nameTextBoxActionPerformed(evt);
-            }
-        });
 
         jLabel6.setFont(new java.awt.Font("Century Gothic", 1, 18)); // NOI18N
         jLabel6.setForeground(new java.awt.Color(102, 102, 102));
         jLabel6.setText("Phone:");
 
         phoneTextBox.setFont(new java.awt.Font("Century Gothic", 1, 14)); // NOI18N
-        phoneTextBox.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                phoneTextBoxActionPerformed(evt);
-            }
-        });
 
         jLabel10.setFont(new java.awt.Font("Century Gothic", 1, 18)); // NOI18N
         jLabel10.setForeground(new java.awt.Color(102, 102, 102));
@@ -158,11 +143,6 @@ public class customer extends javax.swing.JFrame {
                 editButtonMouseClicked(evt);
             }
         });
-        editButton.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                editButtonActionPerformed(evt);
-            }
-        });
 
         deleteButton.setBackground(new java.awt.Color(242, 242, 242));
         deleteButton.setFont(new java.awt.Font("Century Gothic", 1, 16)); // NOI18N
@@ -170,11 +150,6 @@ public class customer extends javax.swing.JFrame {
         deleteButton.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 deleteButtonMouseClicked(evt);
-            }
-        });
-        deleteButton.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                deleteButtonActionPerformed(evt);
             }
         });
 
@@ -186,11 +161,6 @@ public class customer extends javax.swing.JFrame {
                 addButtonMouseClicked(evt);
             }
         });
-        addButton.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                addButtonActionPerformed(evt);
-            }
-        });
 
         homeButton.setBackground(new java.awt.Color(242, 242, 242));
         homeButton.setFont(new java.awt.Font("Century Gothic", 1, 16)); // NOI18N
@@ -198,11 +168,6 @@ public class customer extends javax.swing.JFrame {
         homeButton.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 homeButtonMouseClicked(evt);
-            }
-        });
-        homeButton.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                homeButtonActionPerformed(evt);
             }
         });
 
@@ -319,34 +284,6 @@ public class customer extends javax.swing.JFrame {
         pack();
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
-
-    private void cust_idTextBoxActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cust_idTextBoxActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_cust_idTextBoxActionPerformed
-
-    private void nameTextBoxActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_nameTextBoxActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_nameTextBoxActionPerformed
-
-    private void phoneTextBoxActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_phoneTextBoxActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_phoneTextBoxActionPerformed
-
-    private void editButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_editButtonActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_editButtonActionPerformed
-
-    private void deleteButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_deleteButtonActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_deleteButtonActionPerformed
-
-    private void addButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_addButtonActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_addButtonActionPerformed
-
-    private void homeButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_homeButtonActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_homeButtonActionPerformed
 
     private void addButtonMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_addButtonMouseClicked
         try {

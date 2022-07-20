@@ -139,44 +139,24 @@ public class product extends javax.swing.JFrame {
         jLabel4.setText("Product List");
 
         prod_IDTextBox.setFont(new java.awt.Font("Century Gothic", 1, 14)); // NOI18N
-        prod_IDTextBox.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                prod_IDTextBoxActionPerformed(evt);
-            }
-        });
 
         jLabel5.setFont(new java.awt.Font("Century Gothic", 1, 18)); // NOI18N
         jLabel5.setForeground(new java.awt.Color(102, 102, 102));
         jLabel5.setText("Name:");
 
         nameTextBox.setFont(new java.awt.Font("Century Gothic", 1, 14)); // NOI18N
-        nameTextBox.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                nameTextBoxActionPerformed(evt);
-            }
-        });
 
         jLabel6.setFont(new java.awt.Font("Century Gothic", 1, 18)); // NOI18N
         jLabel6.setForeground(new java.awt.Color(102, 102, 102));
         jLabel6.setText("Quantity:");
 
         quantityTextBox.setFont(new java.awt.Font("Century Gothic", 1, 14)); // NOI18N
-        quantityTextBox.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                quantityTextBoxActionPerformed(evt);
-            }
-        });
 
         jLabel7.setFont(new java.awt.Font("Century Gothic", 1, 18)); // NOI18N
         jLabel7.setForeground(new java.awt.Color(102, 102, 102));
         jLabel7.setText("Description: ");
 
         descriptionTextBox.setFont(new java.awt.Font("Century Gothic", 1, 14)); // NOI18N
-        descriptionTextBox.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                descriptionTextBoxActionPerformed(evt);
-            }
-        });
 
         jLabel8.setFont(new java.awt.Font("Century Gothic", 1, 18)); // NOI18N
         jLabel8.setForeground(new java.awt.Color(102, 102, 102));
@@ -193,11 +173,6 @@ public class product extends javax.swing.JFrame {
                 editButtonMouseClicked(evt);
             }
         });
-        editButton.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                editButtonActionPerformed(evt);
-            }
-        });
 
         deleteButton.setBackground(new java.awt.Color(242, 242, 242));
         deleteButton.setFont(new java.awt.Font("Century Gothic", 1, 16)); // NOI18N
@@ -205,11 +180,6 @@ public class product extends javax.swing.JFrame {
         deleteButton.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 deleteButtonMouseClicked(evt);
-            }
-        });
-        deleteButton.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                deleteButtonActionPerformed(evt);
             }
         });
 
@@ -221,11 +191,6 @@ public class product extends javax.swing.JFrame {
                 addButtonMouseClicked(evt);
             }
         });
-        addButton.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                addButtonActionPerformed(evt);
-            }
-        });
 
         homeButton.setBackground(new java.awt.Color(242, 242, 242));
         homeButton.setFont(new java.awt.Font("Century Gothic", 1, 16)); // NOI18N
@@ -233,11 +198,6 @@ public class product extends javax.swing.JFrame {
         homeButton.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 homeButtonMouseClicked(evt);
-            }
-        });
-        homeButton.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                homeButtonActionPerformed(evt);
             }
         });
 
@@ -377,38 +337,6 @@ public class product extends javax.swing.JFrame {
         pack();
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
-
-    private void prod_IDTextBoxActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_prod_IDTextBoxActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_prod_IDTextBoxActionPerformed
-
-    private void nameTextBoxActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_nameTextBoxActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_nameTextBoxActionPerformed
-
-    private void quantityTextBoxActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_quantityTextBoxActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_quantityTextBoxActionPerformed
-
-    private void descriptionTextBoxActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_descriptionTextBoxActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_descriptionTextBoxActionPerformed
-
-    private void editButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_editButtonActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_editButtonActionPerformed
-
-    private void deleteButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_deleteButtonActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_deleteButtonActionPerformed
-
-    private void addButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_addButtonActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_addButtonActionPerformed
-
-    private void homeButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_homeButtonActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_homeButtonActionPerformed
 
     private void addButtonMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_addButtonMouseClicked
         try {

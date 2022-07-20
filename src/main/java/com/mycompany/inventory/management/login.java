@@ -68,11 +68,6 @@ public class login extends javax.swing.JFrame {
         passwordLabel.setText("Password:");
 
         user_idTextBox.setFont(new java.awt.Font("Century Gothic", 1, 14)); // NOI18N
-        user_idTextBox.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                user_idTextBoxActionPerformed(evt);
-            }
-        });
 
         clearButton.setBackground(new java.awt.Color(204, 204, 204));
         clearButton.setFont(new java.awt.Font("Century Gothic", 1, 14)); // NOI18N
@@ -80,11 +75,6 @@ public class login extends javax.swing.JFrame {
         clearButton.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 clearButtonMouseClicked(evt);
-            }
-        });
-        clearButton.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                clearButtonActionPerformed(evt);
             }
         });
 
@@ -193,14 +183,6 @@ public class login extends javax.swing.JFrame {
         pack();
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
-
-    private void user_idTextBoxActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_user_idTextBoxActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_user_idTextBoxActionPerformed
-
-    private void clearButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_clearButtonActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_clearButtonActionPerformed
 
     private void clearButtonMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_clearButtonMouseClicked
         user_idTextBox.setText("");

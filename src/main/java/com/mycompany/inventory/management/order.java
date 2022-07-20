@@ -225,11 +225,6 @@ public class order extends javax.swing.JFrame {
         orderTable.setSelectionBackground(new java.awt.Color(153, 153, 153));
         orderTable.setSelectionForeground(new java.awt.Color(255, 255, 255));
         orderTable.getTableHeader().setReorderingAllowed(false);
-        orderTable.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                orderTableMouseClicked(evt);
-            }
-        });
         jScrollPane3.setViewportView(orderTable);
 
         jLabel8.setFont(new java.awt.Font("Century Gothic", 1, 18)); // NOI18N
@@ -245,11 +240,6 @@ public class order extends javax.swing.JFrame {
         jLabel10.setText("Quantity:");
 
         quantityTextBox.setFont(new java.awt.Font("Century Gothic", 1, 14)); // NOI18N
-        quantityTextBox.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                quantityTextBoxActionPerformed(evt);
-            }
-        });
 
         addOrderButton.setBackground(new java.awt.Color(204, 204, 204));
         addOrderButton.setFont(new java.awt.Font("Century Gothic", 1, 16)); // NOI18N
@@ -268,11 +258,6 @@ public class order extends javax.swing.JFrame {
                 addButtonMouseClicked(evt);
             }
         });
-        addButton.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                addButtonActionPerformed(evt);
-            }
-        });
 
         homeButton.setBackground(new java.awt.Color(204, 204, 204));
         homeButton.setFont(new java.awt.Font("Century Gothic", 1, 16)); // NOI18N
@@ -282,11 +267,6 @@ public class order extends javax.swing.JFrame {
                 homeButtonMouseClicked(evt);
             }
         });
-        homeButton.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                homeButtonActionPerformed(evt);
-            }
-        });
 
         viewOrderButton.setBackground(new java.awt.Color(204, 204, 204));
         viewOrderButton.setFont(new java.awt.Font("Century Gothic", 1, 16)); // NOI18N
@@ -294,11 +274,6 @@ public class order extends javax.swing.JFrame {
         viewOrderButton.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 viewOrderButtonMouseClicked(evt);
-            }
-        });
-        viewOrderButton.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                viewOrderButtonActionPerformed(evt);
             }
         });
 
@@ -369,8 +344,9 @@ public class order extends javax.swing.JFrame {
                                 .addComponent(jLabel10)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                 .addComponent(quantityTextBox, javax.swing.GroupLayout.PREFERRED_SIZE, 82, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                .addComponent(addButton, javax.swing.GroupLayout.PREFERRED_SIZE, 93, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(addButton, javax.swing.GroupLayout.PREFERRED_SIZE, 93, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(6, 6, 6))
                             .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addGap(37, 37, 37))))
             .addGroup(layout.createSequentialGroup()
@@ -414,18 +390,18 @@ public class order extends javax.swing.JFrame {
                     .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 185, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 191, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(addButton, javax.swing.GroupLayout.PREFERRED_SIZE, 41, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                        .addComponent(jLabel10)
-                        .addComponent(jLabel13)
-                        .addComponent(priceTextBox, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addComponent(quantityTextBox, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel10)
+                    .addComponent(jLabel13)
+                    .addComponent(priceTextBox, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(quantityTextBox, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(addButton, javax.swing.GroupLayout.PREFERRED_SIZE, 41, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(8, 8, 8)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
                         .addGap(14, 14, 14)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(nameDisplay, javax.swing.GroupLayout.DEFAULT_SIZE, 29, Short.MAX_VALUE)
+                            .addComponent(nameDisplay, javax.swing.GroupLayout.DEFAULT_SIZE, 25, Short.MAX_VALUE)
                             .addComponent(jLabel8))
                         .addGap(29, 29, 29)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -441,7 +417,7 @@ public class order extends javax.swing.JFrame {
                             .addComponent(viewOrderButton, javax.swing.GroupLayout.PREFERRED_SIZE, 41, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addGap(34, 34, 34)
                         .addComponent(homeButton, javax.swing.GroupLayout.PREFERRED_SIZE, 41, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(0, 6, Short.MAX_VALUE))
+                        .addGap(0, 2, Short.MAX_VALUE))
                     .addGroup(layout.createSequentialGroup()
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addComponent(jLabel6)
@@ -486,14 +462,6 @@ public class order extends javax.swing.JFrame {
         currentRow.add(name);
         currentRow.add(availableQuantity);
     }//GEN-LAST:event_productTableMouseClicked
-
-    private void orderTableMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_orderTableMouseClicked
-        // TODO add your handling code here:
-    }//GEN-LAST:event_orderTableMouseClicked
-
-    private void quantityTextBoxActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_quantityTextBoxActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_quantityTextBoxActionPerformed
 
     private void addOrderButtonMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_addOrderButtonMouseClicked
         if(dateDisplay.getText().isEmpty() || nameDisplay.getText().isEmpty()){
@@ -553,27 +521,15 @@ public class order extends javax.swing.JFrame {
         }
     }//GEN-LAST:event_addButtonMouseClicked
 
-    private void addButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_addButtonActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_addButtonActionPerformed
-
     private void homeButtonMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_homeButtonMouseClicked
         new homepage().setVisible(true);
         this.dispose();
     }//GEN-LAST:event_homeButtonMouseClicked
 
-    private void homeButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_homeButtonActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_homeButtonActionPerformed
-
     private void viewOrderButtonMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_viewOrderButtonMouseClicked
         new viewOrder().setVisible(true);
         this.setVisible(false);
     }//GEN-LAST:event_viewOrderButtonMouseClicked
-
-    private void viewOrderButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_viewOrderButtonActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_viewOrderButtonActionPerformed
 
     /**
      * @param args the command line arguments
